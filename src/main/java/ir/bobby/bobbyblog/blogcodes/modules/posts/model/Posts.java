@@ -1,10 +1,10 @@
-package ir.arcademy.blog.modules.posts.model;
+package ir.bobby.bobbyblog.blogcodes.modules.posts.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import ir.arcademy.blog.modules.users.model.Users;
+import ir.bobby.bobbyblog.blogcodes.modules.users.model.Users;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -26,13 +26,11 @@ public class Posts {
     @JoinColumn(name = "user_fk")
     private Users users;
 
-
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-
 
     public Posts() {
     }

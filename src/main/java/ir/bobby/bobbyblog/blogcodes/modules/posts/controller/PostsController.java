@@ -1,9 +1,8 @@
-package ir.arcademy.blog.modules.posts.controller;
+package ir.bobby.bobbyblog.blogcodes.modules.posts.controller;
 
-import ir.arcademy.blog.modules.posts.model.Posts;
-import ir.arcademy.blog.modules.posts.service.PostsService;
-import ir.arcademy.blog.modules.users.model.Users;
-import ir.arcademy.blog.modules.users.service.UsersService;
+import ir.bobby.bobbyblog.blogcodes.modules.posts.model.Posts;
+import ir.bobby.bobbyblog.blogcodes.modules.posts.service.PostsService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,10 +27,9 @@ public class PostsController {
         return postsService.findAllPosts();
     }
 
-    @RequestMapping(value = {"/",""}, method = RequestMethod.POST)
+    @RequestMapping(value = { "/", "" }, method = RequestMethod.POST)
     public Posts registerPost(@RequestBody Posts posts) {
         return postsService.registerPost(posts);
     }
-
 
 }

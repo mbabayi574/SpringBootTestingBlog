@@ -1,7 +1,7 @@
-package ir.arcademy.blog.modules.users.controller;
+package ir.bobby.bobbyblog.blogcodes.modules.users.controller;
 
-import ir.arcademy.blog.modules.users.model.Users;
-import ir.arcademy.blog.modules.users.service.UsersService;
+import ir.bobby.bobbyblog.blogcodes.modules.users.model.Users;
+import ir.bobby.bobbyblog.blogcodes.modules.users.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,15 +21,14 @@ public class UsersController {
         this.usersService = usersService;
     }
 
-    @RequestMapping(value = {"/",""}, method = RequestMethod.GET)
+    @RequestMapping(value = { "/", "" }, method = RequestMethod.GET)
     public List<Users> getUsers() {
         return usersService.findAllUsers();
     }
 
-    @RequestMapping(value = {"/",""}, method = RequestMethod.POST)
+    @RequestMapping(value = { "/", "" }, method = RequestMethod.POST)
     public Users registerUser(@RequestBody Users users) {
         return usersService.registerUser(users);
     }
-
 
 }

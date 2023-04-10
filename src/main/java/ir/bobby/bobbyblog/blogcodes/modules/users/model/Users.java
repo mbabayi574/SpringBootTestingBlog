@@ -1,8 +1,7 @@
-package ir.arcademy.blog.modules.users.model;
-
+package ir.bobby.bobbyblog.blogcodes.modules.users.model;
 
 import com.fasterxml.jackson.annotation.*;
-import ir.arcademy.blog.modules.posts.model.Posts;
+import ir.bobby.bobbyblog.blogcodes.modules.posts.model.Posts;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

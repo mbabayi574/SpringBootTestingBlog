@@ -1,7 +1,7 @@
-package ir.arcademy.blog.modules.users.service;
+package ir.bobby.bobbyblog.blogcodes.modules.users.service;
 
-import ir.arcademy.blog.modules.users.model.Users;
-import ir.arcademy.blog.modules.users.repository.UsersRepository;
+import ir.bobby.bobbyblog.blogcodes.modules.users.model.Users;
+import ir.bobby.bobbyblog.blogcodes.modules.users.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +24,5 @@ public class UsersService {
     public List<Users> findAllUsers() {
         return this.usersRepository.findAll();
     }
-
 
 }

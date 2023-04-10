@@ -1,4 +1,4 @@
-package ir.arcademy.blog.modules.posts.model;
+package ir.bobby.bobbyblog.blogcodes.modules.posts.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -18,7 +18,6 @@ public class Category {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-
 
     public Category() {
     }

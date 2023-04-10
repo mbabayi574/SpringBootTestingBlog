@@ -1,9 +1,7 @@
-package ir.arcademy.blog.modules.posts.service;
+package ir.bobby.bobbyblog.blogcodes.modules.posts.service;
 
-import ir.arcademy.blog.modules.posts.model.Posts;
-import ir.arcademy.blog.modules.posts.repository.PostsRepository;
-import ir.arcademy.blog.modules.users.model.Users;
-import ir.arcademy.blog.modules.users.repository.UsersRepository;
+import ir.bobby.bobbyblog.blogcodes.modules.posts.model.Posts;
+import ir.bobby.bobbyblog.blogcodes.modules.posts.repository.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +24,5 @@ public class PostsService {
     public List<Posts> findAllPosts() {
         return this.postsRepository.findAll();
     }
-
 
 }
