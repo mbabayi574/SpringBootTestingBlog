@@ -8,6 +8,7 @@ import ir.bobby.bobbyblog.blogcodes.modules.users.model.Users;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "posts_tbl")
@@ -25,6 +26,18 @@ public class Posts {
     @ManyToOne
     @JoinColumn(name = "user_fk")
     private Users users;
+
+    @ManyToMany
+    @JoinTable(name = "posts_category")
+    private List<Category> categories;
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;

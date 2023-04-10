@@ -4,7 +4,7 @@ import ir.bobby.bobbyblog.blogcodes.modules.posts.model.Posts;
 import ir.bobby.bobbyblog.blogcodes.modules.posts.repository.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -17,6 +17,7 @@ public class PostsService {
         this.postsRepository = postsRepository;
     }
 
+    @Transactional
     public Posts registerPost(Posts posts) {
         return this.postsRepository.save(posts);
     }
